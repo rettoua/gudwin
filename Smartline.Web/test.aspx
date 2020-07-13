@@ -1,0 +1,320 @@
+﻿<%@ Page Language="C#" %>
+
+<%@ Register Assembly="Ext.Net" Namespace="Ext.Net" TagPrefix="ext" %>
+
+<script runat="server">
+    protected void Page_Load(object sender, EventArgs e) {
+        if (!X.IsAjaxRequest) {
+            this.Store1.DataSource = new List<object>
+                            {
+                                new
+                                    {
+                                        Id = 1,
+                                        Price = 71.72,
+                                        Company = "3m Co",
+                                        Date = new DateTime(2007, 9, 1),
+                                        Size = "large",
+                                        Visible = true
+                                    },
+                                new
+                                    {
+                                        Id = 2,
+                                        Price = 29.01,
+                                        Company = "Aloca Inc",
+                                        Date = new DateTime(2007, 08, 01),
+                                        Size = "medium",
+                                        Visible = false
+                                    },
+                                new
+                                    {
+                                        Id = 3,
+                                        Price = 83.81,
+                                        Company = "Altria Group Inc",
+                                        Date = new DateTime(2007, 08, 03),
+                                        Size = "large",
+                                        Visible = false
+                                    },
+                                new
+                                    {
+                                        Id = 4,
+                                        Price = 52.55,
+                                        Company = "American Express Company",
+                                        Date = new DateTime(2008, 01, 04),
+                                        Size = "extra large",
+                                        Visible = true
+                                    },
+                                new
+                                    {
+                                        Id = 5,
+                                        Price = 64.13,
+                                        Company = "American International Group Inc.",
+                                        Date = new DateTime(2008, 03, 04),
+                                        Size = "small",
+                                        Visible = true
+                                    },
+                                new
+                                    {
+                                        Id = 6,
+                                        Price = 31.61,
+                                        Company = "AT&T Inc.",
+                                        Date = new DateTime(2008, 02, 01),
+                                        Size = "extra large",
+                                        Visible = false
+                                    },
+                                new
+                                    {
+                                        Id = 7,
+                                        Price = 75.43,
+                                        Company = "Boeing Co.",
+                                        Date = new DateTime(2008, 01, 01),
+                                        Size = "large",
+                                        Visible = true
+                                    },
+                                new
+                                    {
+                                        Id = 8,
+                                        Price = 67.27,
+                                        Company = "Caterpillar Inc.",
+                                        Date = new DateTime(2007, 12, 03),
+                                        Size = "medium",
+                                        Visible = true
+                                    },
+                                new
+                                    {
+                                        Id = 9,
+                                        Price = 49.37,
+                                        Company = "Citigroup, Inc.",
+                                        Date = new DateTime(2007, 11, 24),
+                                        Size = "large",
+                                        Visible = true
+                                    },
+                                new
+                                    {
+                                        Id = 10,
+                                        Price = 40.48,
+                                        Company = "E.I. du Pont de Nemours and Company",
+                                        Date = new DateTime(2007, 05, 09),
+                                        Size = "extra large",
+                                        Visible = false
+                                    },
+                                new
+                                    {
+                                        Id = 11,
+                                        Price = 68.1,
+                                        Company = "Exxon Mobile Corp",
+                                        Date = new DateTime(2007, 12, 12),
+                                        Size = "large",
+                                        Visible = true
+                                    },
+                                new
+                                    {
+                                        Id = 12,
+                                        Price = 34.14,
+                                        Company = "General Electric Company",
+                                        Date = new DateTime(2008, 06, 16),
+                                        Size = "extra large",
+                                        Visible = true
+                                    },
+                                new
+                                    {
+                                        Id = 13,
+                                        Price = 30.27,
+                                        Company = "General Motors Corporation",
+                                        Date = new DateTime(2006, 12, 07),
+                                        Size = "medium",
+                                        Visible = true
+                                    },
+                                new
+                                    {
+                                        Id = 14,
+                                        Price = 36.53,
+                                        Company = "Hewlett-Packard Co.",
+                                        Date = new DateTime(2007, 05, 13),
+                                        Size = "large",
+                                        Visible = true
+                                    },
+                                new
+                                    {
+                                        Id = 15,
+                                        Price = 38.77,
+                                        Company = "Honweywell Intl Inc",
+                                        Date = new DateTime(2006, 11, 07),
+                                        Size = "medium",
+                                        Visible = false
+                                    },
+                                new
+                                    {
+                                        Id = 16,
+                                        Price = 19.88,
+                                        Company = "Intel Corporation",
+                                        Date = new DateTime(2007, 01, 09),
+                                        Size = "small",
+                                        Visible = true
+                                    },
+                                new
+                                    {
+                                        Id = 17,
+                                        Price = 81.41,
+                                        Company = "International Business Machines",
+                                        Date = new DateTime(2005, 01, 21),
+                                        Size = "extra large",
+                                        Visible = true
+                                    },
+                                new
+                                    {
+                                        Id = 18,
+                                        Price = 64.72,
+                                        Company = "Johnson & Johnson",
+                                        Date = new DateTime(2008, 01, 10),
+                                        Size = "extra large",
+                                        Visible = true
+                                    },
+                                new
+                                    {
+                                        Id = 19,
+                                        Price = 45.73,
+                                        Company = "JP Morgan & Chase & Co",
+                                        Date = new DateTime(2008, 02, 20),
+                                        Size = "large",
+                                        Visible = false
+                                    },
+                                new
+                                    {
+                                        Id = 20,
+                                        Price = 36.76,
+                                        Company = "McDonald's Corporation",
+                                        Date = new DateTime(2007, 06, 12),
+                                        Size = "large",
+                                        Visible = true
+                                    },
+                                new
+                                    {
+                                        Id = 21,
+                                        Price = 27.96,
+                                        Company = "Pfizer Inc",
+                                        Date = new DateTime(2007, 12, 30),
+                                        Size = "small",
+                                        Visible = false
+                                    },
+                                new
+                                    {
+                                        Id = 22,
+                                        Price = 45.07,
+                                        Company = "The Coca-Cola Company",
+                                        Date = new DateTime(2007, 01, 30),
+                                        Size = "medium",
+                                        Visible = false
+                                    },
+                                new
+                                    {
+                                        Id = 23,
+                                        Price = 34.64,
+                                        Company = "The Home Depot, Inc",
+                                        Date = new DateTime(2006, 12, 31),
+                                        Size = "small",
+                                        Visible = true
+                                    },
+                                new
+                                    {
+                                        Id = 24,
+                                        Price = 61.91,
+                                        Company = "The Procter & Gamble Company",
+                                        Date = new DateTime(2007, 04, 08),
+                                        Size = "extra large",
+                                        Visible = true
+                                    },
+                                new
+                                    {
+                                        Id = 25,
+                                        Price = 63.26,
+                                        Company = "United Technologies Corporation",
+                                        Date = new DateTime(2006, 06, 04),
+                                        Size = "medium",
+                                        Visible = true
+                                    },
+                                new
+                                    {
+                                        Id = 26,
+                                        Price = 35.57,
+                                        Company = "Verizon Communications",
+                                        Date = new DateTime(2005, 07, 09),
+                                        Size = "small",
+                                        Visible = false
+                                    },
+                                new
+                                    {
+                                        Id = 27,
+                                        Price = 45.45,
+                                        Company = "Wal-Mart Stores, Inc",
+                                        Date = new DateTime(2006, 09, 09),
+                                        Size = "large",
+                                        Visible = true
+                                    }
+                            };
+            this.Store1.DataBind();
+        }
+    }
+
+    protected Field OnCreateFilterableField(object sender, ColumnBase column, Field defaultField) {
+        if (column.DataIndex == "Id") {
+            ((TextField)defaultField).Icon = Icon.Magnifier;
+        }
+
+        return defaultField;
+    }
+</script>
+
+<!DOCTYPE html>
+<html>
+
+<script type="text/javascript">
+    var addColumn = function () {
+        var grid = App.gridPanel;
+        grid.store.removeField('Name');
+        //grid.store.model.prototype.fields.removeAtKey('Name');
+    };
+
+</script>
+<form id="form1" runat="server">
+    <ext:ResourceManager ID="ResourceManager1" runat="server">
+    </ext:ResourceManager>
+    <ext:GridPanel runat="server">
+        <Store>
+            <ext:Store ID="Store1" runat="server" >
+                <Model>
+                    <ext:Model runat="server" IDProperty="Id">
+                        <Fields>
+                            <ext:ModelField Name="Id" Type="Int" />
+                            <ext:ModelField Name="Company" Type="String" />
+                            <ext:ModelField Name="Price" Type="Float" />
+                            <ext:ModelField Name="Date" Type="Date" />
+                            <ext:ModelField Name="Size" Type="String" />
+                            <ext:ModelField Name="Visible" Type="Boolean" />
+                        </Fields>
+                    </ext:Model>
+                </Model>
+                <Sorters>
+                    <%--<ext:DataSorter Property="Company" Direction="ASC" />--%>
+                </Sorters>
+            </ext:Store>
+        </Store>
+        <ColumnModel runat="server">
+            <Columns>
+                <ext:Column runat="server" Text="ID" DataIndex="Id" />
+                <ext:Column runat="server" Text="Company" DataIndex="Company" Flex="1" />
+                <ext:Column runat="server" Text="Price" DataIndex="Price">
+                    <Renderer Format="UsMoney" />
+                </ext:Column>
+                <ext:DateColumn runat="server" Text="Date" DataIndex="Date" Align="Center" Format="yyyy-MM-dd" />
+                <ext:Column runat="server" Text="Size" DataIndex="Size" />
+                <ext:Column runat="server" Text="Visible" DataIndex="Visible" Align="Center">
+                    <Renderer Handler="return (value) ? 'Yes':'No';" />
+                </ext:Column>
+            </Columns>
+        </ColumnModel>
+        <Plugins>
+            <ext:FilterHeader runat="server"  />
+        </Plugins>       
+    </ext:GridPanel>
+</form>
+</html>

@@ -1,0 +1,51 @@
+﻿a.filter-menu-trigger
+{
+    width: 15px;
+    height: 15px;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+a.filter-menu-trigger div
+{
+    width: 15px;
+    height: 15px;
+    display: block;
+    line-height: 15px;
+    background: url(filter_icon.png);
+    background-repeat: no-repeat;
+    background-size: 13px 13px;
+}
+
+a.filter-menu-trigger:hover div
+{
+    background-position: 1px 1px;
+}
+
+.icon-filter
+{
+    background-image: url(filter.png);
+}
+
+.x-menu-item-active .x-active-delete .x-menu-item-icon
+{
+    background-image: url(cross.png);
+}
+
+.x-smart-field .x-textfield-icon 
+{
+    right: 0;
+    
+    cursor: pointer;
+}
+
+.x-without-mouse .x-textfield-icon 
+{
+    visibility: hidden;
+}
+
+.x-with-mouse .x-textfield-icon 
+{
+    visibility: visible;
+    
+}

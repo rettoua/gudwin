@@ -1,0 +1,613 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES2015</TypeScriptTarget>
+    <TypeScriptJSXEmit>React</TypeScriptJSXEmit>
+    <TypeScriptModuleKind>ES6</TypeScriptModuleKind>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>False</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+    <TypeScriptToolsVersion>3.7</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AB83A15A-DE16-48D7-AF79-A89FAE4C2029}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Smartline.Web</RootNamespace>
+    <AssemblyName>Smartline.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TypeScriptToolsVersion>3.7</TypeScriptToolsVersion>
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
+    <IncludeIisSettings>false</IncludeIisSettings>
+    <PublishDatabases>false</PublishDatabases>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PackageAsSingleFile>false</PackageAsSingleFile>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.2.0.0\lib\2.0\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Couchbase, Version=1.2.0.0, Culture=neutral, PublicKeyToken=05e9c6b5a9ec94c2, processorArchitecture=MSIL">
+      <HintPath>..\packages\CouchbaseNetClient.1.2.0\lib\net40\Couchbase.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Enyim.Caching, Version=2.12.0.0, Culture=neutral, PublicKeyToken=05e9c6b5a9ec94c2, processorArchitecture=MSIL">
+      <HintPath>..\packages\CouchbaseNetClient.1.2.0\lib\net40\Enyim.Caching.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ext.Net, Version=2.2.0.40838, Culture=neutral, PublicKeyToken=2e12ce3d0176cd87, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\Ext.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Ext.Net.Utilities, Version=2.2.0.0, Culture=neutral, PublicKeyToken=2c34ac34702a3c23, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\Ext.Net.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Hammock, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c148cfba29ed1a4d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hammock.1.2.9\lib\4.0\Hammock.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Hammock.ClientProfile, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c148cfba29ed1a4d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hammock.1.2.9\lib\4.0\Hammock.ClientProfile.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Owin, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Owin.1.2.0\lib\net45\Microsoft.AspNet.SignalR.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Cors, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Cors.2.1.0\lib\net45\Microsoft.Owin.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.HttpListener, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.HttpListener.2.1.0\lib\net45\Microsoft.Owin.Host.HttpListener.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Hosting">
+      <HintPath>..\packages\Microsoft.Owin.Hosting.2.1.0\lib\net45\Microsoft.Owin.Hosting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Cors">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.0.0\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Readme\Ext.NET.Utilities.LICENSE.txt" />
+    <Content Include="App_Readme\Ext.NET.Utilities.README.txt" />
+    <Content Include="App_Readme\Ext.NET\BREAKING_CHANGES.txt" />
+    <Content Include="App_Readme\Ext.NET\CHANGELOG.txt" />
+    <Content Include="App_Readme\Ext.NET\LICENSE.txt" />
+    <Content Include="App_Readme\Ext.NET\README.txt" />
+    <Content Include="App_Readme\Transformer.NET\LICENSE.txt" />
+    <Content Include="App_Readme\Transformer.NET\README.txt" />
+    <Content Include="default_new.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="images\layers.png" />
+    <Content Include="Libraries\Couchbase.dll" />
+    <Content Include="Libraries\Enyim.Caching.dll" />
+    <Content Include="Libraries\Ext.Net.dll" />
+    <Content Include="Libraries\Ext.Net.Utilities.dll" />
+    <Content Include="Libraries\Ext.Net.Utilities.xml" />
+    <Content Include="Libraries\Hammock.dll" />
+    <Content Include="Libraries\Newtonsoft.Json.dll" />
+    <Content Include="Libraries\Transformer.NET.dll" />
+    <Content Include="Libraries\Transformer.NET.xml" />
+    <Content Include="Log\log.aspx" />
+    <Content Include="manage\accounting.aspx" />
+    <Content Include="manage\admin.aspx" />
+    <Content Include="App_Data\Transformer.NET.xml" />
+    <Content Include="cars.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="manage\statemonitor.aspx" />
+    <Content Include="manage\trackers.ascx" />
+    <Content Include="manage\traffic.aspx" />
+    <Content Include="manage\users.ascx" />
+    <Content Include="map.aspx" />
+    <Content Include="payments\paid.aspx" />
+    <Content Include="References\AjaxControlToolkit.dll" />
+    <Content Include="References\Ext.Net.dll" />
+    <Content Include="References\Ext.Net.Utilities.dll" />
+    <Content Include="References\itextsharp.dll" />
+    <Content Include="References\Newtonsoft.Json.dll" />
+    <Content Include="Download.ashx" />
+    <Content Include="cars_source.ashx" />
+    <Content Include="packages.config" />
+    <Content Include="operators.ashx" />
+    <Content Include="payments\confirmation.ashx" />
+    <Content Include="carimagecss.ashx" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\qwert.pubxml" />
+    <None Include="Resources\close_copy_clow.png" />
+    <Content Include="Resources\Battery100.png" />
+    <Content Include="Resources\Battery25.png" />
+    <Content Include="Resources\Battery50.png" />
+    <Content Include="Resources\Battery75.png" />
+    <Content Include="Resources\car_circle.png" />
+    <Content Include="Resources\car_circle_sos.png" />
+    <Content Include="Resources\car_circle_sos_lite.png" />
+    <Content Include="Resources\car_circle_stop.png" />
+    <Content Include="Resources\car_default.png" />
+    <Content Include="Resources\car_default_sos.png" />
+    <Content Include="Resources\car_default_sos_lite.png" />
+    <Content Include="Resources\car_default_stop.png" />
+    <Content Include="Resources\car_marker.png" />
+    <Content Include="Resources\docked_title.png" />
+    <Content Include="Resources\docked_title_blue.png" />
+    <Content Include="Resources\dot_inactive.png" />
+    <Content Include="Resources\dot_stop.png" />
+    <Content Include="Resources\empty_marker.png" />
+    <Content Include="Resources\off_r.png" />
+    <Content Include="Resources\off_r32.png" />
+    <Content Include="Resources\off_s.png" />
+    <Content Include="Resources\on_r.png" />
+    <Content Include="Resources\extanim32.gif" />
+    <Content Include="Resources\group-expand-sprite.png" />
+    <None Include="Resources\background.png" />
+    <None Include="Resources\login_left.png" />
+    <None Include="Resources\login_right.png" />
+    <None Include="Resources\login_top.png" />
+    <None Include="Resources\login_bottom.png" />
+    <None Include="Resources\login_center.png" />
+    <None Include="Resources\dot.png" />
+    <None Include="Resources\Attention2.png" />
+    <Content Include="reporting.aspx" />
+    <Content Include="Resources\load.gif" />
+    <Content Include="Resources\no-signal.png" />
+    <Content Include="Resources\no-signal_16.png" />
+    <Content Include="Resources\on_r32.png" />
+    <Content Include="Resources\on_s.png" />
+    <Content Include="Resources\pan.png" />
+    <Content Include="Resources\parking.jpg" />
+    <Content Include="Resources\parking_inactive.jpg" />
+    <Content Include="Resources\road-icon.gif" />
+    <Content Include="Resources\road.png" />
+    <Content Include="Resources\speed_sign.png" />
+    <Content Include="Resources\speed_sign_inactive.png" />
+    <Content Include="Resources\start_end.png" />
+    <Content Include="Resources\toolbar-default-bg.png" />
+    <Content Include="Resources\traffic_light.png" />
+    <Content Include="Resources\traffic_light_inactive.png" />
+    <Content Include="Resources\un_r.png" />
+    <Content Include="Resources\un_r32.png" />
+    <Content Include="Resources\un_s.png" />
+    <Content Include="Resources\w_r.png" />
+    <Content Include="Resources\w_r32.png" />
+    <Content Include="Resources\w_s.png" />
+    <None Include="Scripts\jquery-1.6.4-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.6.4.js" />
+    <Content Include="Scripts\jquery-1.6.4.min.js" />
+    <Content Include="Scripts\jquery.signalR-2.0.0.js" />
+    <Content Include="Scripts\jquery.signalR-2.0.0.min.js" />
+    <Content Include="Scripts\leaflet.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\ver\L.LineUtil.PolylineDecorator.js" />
+    <Content Include="Scripts\ver\L.PolylineDecorator.js" />
+    <Content Include="Scripts\ver\L.RotatedMarker.js" />
+    <Content Include="Scripts\ver\L.Symbol.js" />
+    <Content Include="Scripts\ver\leaflet.polylineDecorator.js" />
+    <Content Include="Scripts\ver\leaflet.polylineDecorator.min.js" />
+    <Content Include="Scripts\ver\admin.js" />
+    <Content Include="Scripts\ver\car.js" />
+    <Content Include="Scripts\ver\carsettings.js" />
+    <Content Include="Scripts\ver\crosshair.js" />
+    <Content Include="Scripts\ver\entry.js" />
+    <Content Include="Scripts\ver\HeaderFilter.js" />
+    <Content Include="Scripts\ver\jsroadservice.js" />
+    <Content Include="Scripts\ver\jsstailish.js" />
+    <Content Include="Scripts\ver\common.js" />
+    <Content Include="Scripts\layer\Icon.Canvas.js" />
+    <Content Include="Scripts\layer\Layer.Deferred.js" />
+    <Content Include="Scripts\layer\Marker.Rotate.js" />
+    <Content Include="Scripts\layer\Marker.Text.js" />
+    <Content Include="Scripts\layer\OpenStreetBugs.js" />
+    <Content Include="Scripts\layer\tile\Bing.js" />
+    <Content Include="Scripts\layer\tile\Google.js" />
+    <Content Include="Scripts\layer\tile\Yandex.js" />
+    <Content Include="Scripts\layer\vector\GPX.js" />
+    <Content Include="Scripts\layer\vector\GPX.Speed.js" />
+    <Content Include="Scripts\layer\vector\KML.js" />
+    <Content Include="Scripts\layer\vector\OSM.js" />
+    <Content Include="Scripts\ver\monitoring.js" />
+    <Content Include="Scripts\ver\repo.js" />
+    <Content Include="Scripts\ver\report.js" />
+    <Content Include="Scripts\ver\settings.js" />
+    <Content Include="settings.aspx" />
+    <Content Include="signalr.aspx" />
+    <Content Include="style\carlist.css" />
+    <Content Include="style\c_rect.css" />
+    <Content Include="style\header.css" />
+    <Content Include="style\HeaderFilter.css" />
+    <Content Include="style\leaflet.css" />
+    <Content Include="style\login.css" />
+    <Content Include="style\main.css" />
+    <Content Include="style\payments.css" />
+    <Content Include="style\repository.css" />
+    <Content Include="style\settings.css" />
+    <Content Include="style\tracker.css" />
+    <Content Include="test.aspx" />
+    <Content Include="default.aspx" />
+    <Content Include="Scripts\ver\gud.trackworker.js" />
+    <Content Include="Scripts\ver\gud.trackbuilder.js" />
+    <Content Include="tsconfig.json" />
+    <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="ts\core\CarSettings.ts" />
+    <TypeScriptCompile Include="ts\core\GeoLocation.ts" />
+    <TypeScriptCompile Include="ts\core\SensorHistory.ts" />
+    <TypeScriptCompile Include="ts\core\TrackWorker.ts" />
+    <TypeScriptCompile Include="ts\models\TrackerModel.ts" />
+    <TypeScriptCompile Include="ts\controllers\GpsProvider.ts" />
+    <TypeScriptCompile Include="ts\core\Application.ts" />
+    <Content Include="ts\controllers\GpsProvider.js" />
+    <TypeScriptCompile Include="ts\core\ServerCommunication.ts" />
+    <TypeScriptCompile Include="ts\core\GpsLoader.ts" />
+    <TypeScriptCompile Include="ts\core\Event.ts" />
+    <Content Include="ts\core\Application.js" />
+    <Content Include="ts\core\CarSettings.js" />
+    <Content Include="ts\core\Event.js" />
+    <Content Include="ts\core\GeoLocation.js" />
+    <Content Include="ts\core\GpsLoader.js" />
+    <TypeScriptCompile Include="ts\core\Map.ts" />
+    <Content Include="ts\core\Map.js" />
+    <TypeScriptCompile Include="ts\models\ObjectDefinitions.ts" />
+    <TypeScriptCompile Include="ts\core\RepositoryManager.ts" />
+    <TypeScriptCompile Include="ts\core\PaymentManager.ts" />
+    <Content Include="ts\core\PaymentManager.js" />
+    <Content Include="ts\core\RepositoryManager.js" />
+    <TypeScriptCompile Include="ts\core\Updatable.ts" />
+    <Content Include="ts\core\SensorHistory.js" />
+    <Content Include="ts\core\TrackWorker.js" />
+    <Content Include="ts\core\Updatable.js" />
+    <Content Include="ts\models\ObjectDefinitions.js" />
+    <Content Include="ts\core\ServerCommunication.js" />
+    <TypeScriptCompile Include="ts\core\SettingsManager.ts" />
+    <Content Include="ts\core\SettingsManager.js" />
+    <Content Include="ts\models\TrackerModel.js" />
+    <TypeScriptCompile Include="ts\views\ViewRepositoryManager.ts" />
+    <TypeScriptCompile Include="ts\views\Tracking.ts" />
+    <Content Include="ts\views\Tracking.js" />
+    <Content Include="ts\views\ViewRepositoryManager.js" />
+    <Content Include="upload.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="update.ashx" />
+    <Content Include="SessionRefresh.ashx" />
+    <Content Include="Scripts\ver\L.TrackDecorator.js" />
+    <Content Include="Scripts\ver\L.Track.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add_Start\BundleConfig.cs" />
+    <Compile Include="carimagecss.ashx.cs">
+      <DependentUpon>carimagecss.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="default_new.aspx.cs">
+      <DependentUpon>default_new.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default_new.aspx.designer.cs">
+      <DependentUpon>default_new.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helper.cs" />
+    <Compile Include="LoadTrackObject.cs" />
+    <Compile Include="Log\FileLogParser.cs" />
+    <Compile Include="Log\log.aspx.cs">
+      <DependentUpon>log.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Log\log.aspx.designer.cs">
+      <DependentUpon>log.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\accounting.aspx.cs">
+      <DependentUpon>accounting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\accounting.aspx.designer.cs">
+      <DependentUpon>accounting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\admin.aspx.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\admin.aspx.designer.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cars.aspx.cs">
+      <DependentUpon>cars.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cars.aspx.designer.cs">
+      <DependentUpon>cars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cars_source.ashx.cs">
+      <DependentUpon>cars_source.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Download.ashx.cs">
+      <DependentUpon>Download.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\ManageHelper.cs" />
+    <Compile Include="manage\statemonitor.aspx.cs">
+      <DependentUpon>statemonitor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\statemonitor.aspx.designer.cs">
+      <DependentUpon>statemonitor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\trackers.ascx.cs">
+      <DependentUpon>trackers.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\trackers.ascx.designer.cs">
+      <DependentUpon>trackers.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\traffic.aspx.cs">
+      <DependentUpon>traffic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\traffic.aspx.designer.cs">
+      <DependentUpon>traffic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\users.ascx.cs">
+      <DependentUpon>users.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\users.ascx.designer.cs">
+      <DependentUpon>users.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="map.aspx.cs">
+      <DependentUpon>map.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="map.aspx.designer.cs">
+      <DependentUpon>map.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="operators.ashx.cs">
+      <DependentUpon>operators.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="payments\confirmation.ashx.cs">
+      <DependentUpon>confirmation.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="payments\paid.aspx.cs">
+      <DependentUpon>paid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="payments\paid.aspx.designer.cs">
+      <DependentUpon>paid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Plugins\HeaderFilter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="reporting.aspx.cs">
+      <DependentUpon>reporting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reporting.aspx.designer.cs">
+      <DependentUpon>reporting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SessionRefresh.ashx.cs">
+      <DependentUpon>SessionRefresh.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="settings.aspx.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="settings.aspx.designer.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="signalr.aspx.cs">
+      <DependentUpon>signalr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signalr.aspx.designer.cs">
+      <DependentUpon>signalr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrackMaker.cs" />
+    <Compile Include="update.ashx.cs">
+      <DependentUpon>update.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="upload.aspx.cs">
+      <DependentUpon>upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="upload.aspx.designer.cs">
+      <DependentUpon>upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebLogging\WebLoggingHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+    <Folder Include="image\" />
+    <Folder Include="signalr\hubs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Smartline.Common.Runtime\Smartline.Common.Runtime.csproj">
+      <Project>{7E1FE99A-D6AF-4981-8186-27685EC8918D}</Project>
+      <Name>Smartline.Common.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Smartline.Mapping\Smartline.Mapping.csproj">
+      <Project>{AEE18EB7-3B5A-4043-B05B-DD5C82CBC4B2}</Project>
+      <Name>Smartline.Mapping</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Smartline.Server.Runtime\Smartline.Server.Runtime.csproj">
+      <Project>{4974fdeb-4537-4703-ab77-1cb194d050e6}</Project>
+      <Name>Smartline.Server.Runtime</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptSourceMap>False</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

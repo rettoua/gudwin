@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://localhost:19236/WebServer/Service1.asmx/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://localhost:19236/WebServer/Service1.asmx/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://localhost:19236/WebServer/Service1.asmx/">
+      <s:element name="ConnectToServer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tz" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConnectToServerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConnectToServerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClientPing">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="a" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClientPingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ClientPingResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Disconnect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="a" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DisconnectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DisconnectResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAlarmTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="a" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAlarmTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAlarmTableResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRequestedAlarmTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="from_date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="to_date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRequestedAlarmTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRequestedAlarmTableResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllObjects">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="a" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllObjectsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllObjectsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateObjectsInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="a" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateObjectsInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateObjectsInfoResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAlarms">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="a" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAlarmsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateAlarmsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRoute">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sensor_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="from_date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="to_date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRouteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRouteResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetObjInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetObjInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetObjInfoResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllObjInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllObjInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllObjInfoResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetObjParams">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetObjParamsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetObjParamsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="report_type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="from_date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="to_date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReportResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseTime">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLicenseTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLicenseTimeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetLicenseTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="hexCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetLicenseTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetLicenseTimeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ConnectToServerSoapIn">
+    <wsdl:part name="parameters" element="tns:ConnectToServer" />
+  </wsdl:message>
+  <wsdl:message name="ConnectToServerSoapOut">
+    <wsdl:part name="parameters" element="tns:ConnectToServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ClientPingSoapIn">
+    <wsdl:part name="parameters" element="tns:ClientPing" />
+  </wsdl:message>
+  <wsdl:message name="ClientPingSoapOut">
+    <wsdl:part name="parameters" element="tns:ClientPingResponse" />
+  </wsdl:message>
+  <wsdl:message name="DisconnectSoapIn">
+    <wsdl:part name="parameters" element="tns:Disconnect" />
+  </wsdl:message>
+  <wsdl:message name="DisconnectSoapOut">
+    <wsdl:part name="parameters" element="tns:DisconnectResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAlarmTableSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAlarmTable" />
+  </wsdl:message>
+  <wsdl:message name="GetAlarmTableSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAlarmTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRequestedAlarmTableSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRequestedAlarmTable" />
+  </wsdl:message>
+  <wsdl:message name="GetRequestedAlarmTableSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRequestedAlarmTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllObjectsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllObjects" />
+  </wsdl:message>
+  <wsdl:message name="GetAllObjectsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllObjectsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateObjectsInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateObjectsInfo" />
+  </wsdl:message>
+  <wsdl:message name="UpdateObjectsInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateObjectsInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAlarmsSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAlarms" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAlarmsSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAlarmsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRouteSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRoute" />
+  </wsdl:message>
+  <wsdl:message name="GetRouteSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRouteResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetObjInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetObjInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetObjInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetObjInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllObjInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllObjInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetAllObjInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllObjInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetObjParamsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetObjParams" />
+  </wsdl:message>
+  <wsdl:message name="GetObjParamsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetObjParamsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReport" />
+  </wsdl:message>
+  <wsdl:message name="GetReportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLicenseTime" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLicenseTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetLicenseTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:SetLicenseTime" />
+  </wsdl:message>
+  <wsdl:message name="SetLicenseTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:SetLicenseTimeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="GUDWIN_x0020_GisServerServiceSoap">
+    <wsdl:operation name="ConnectToServer">
+      <wsdl:input message="tns:ConnectToServerSoapIn" />
+      <wsdl:output message="tns:ConnectToServerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClientPing">
+      <wsdl:input message="tns:ClientPingSoapIn" />
+      <wsdl:output message="tns:ClientPingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Disconnect">
+      <wsdl:input message="tns:DisconnectSoapIn" />
+      <wsdl:output message="tns:DisconnectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarmTable">
+      <wsdl:input message="tns:GetAlarmTableSoapIn" />
+      <wsdl:output message="tns:GetAlarmTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestedAlarmTable">
+      <wsdl:input message="tns:GetRequestedAlarmTableSoapIn" />
+      <wsdl:output message="tns:GetRequestedAlarmTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllObjects">
+      <wsdl:input message="tns:GetAllObjectsSoapIn" />
+      <wsdl:output message="tns:GetAllObjectsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateObjectsInfo">
+      <wsdl:input message="tns:UpdateObjectsInfoSoapIn" />
+      <wsdl:output message="tns:UpdateObjectsInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAlarms">
+      <wsdl:input message="tns:UpdateAlarmsSoapIn" />
+      <wsdl:output message="tns:UpdateAlarmsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoute">
+      <wsdl:input message="tns:GetRouteSoapIn" />
+      <wsdl:output message="tns:GetRouteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetObjInfo">
+      <wsdl:input message="tns:GetObjInfoSoapIn" />
+      <wsdl:output message="tns:GetObjInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllObjInfo">
+      <wsdl:input message="tns:GetAllObjInfoSoapIn" />
+      <wsdl:output message="tns:GetAllObjInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetObjParams">
+      <wsdl:input message="tns:GetObjParamsSoapIn" />
+      <wsdl:output message="tns:GetObjParamsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReport">
+      <wsdl:input message="tns:GetReportSoapIn" />
+      <wsdl:output message="tns:GetReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseTime">
+      <wsdl:input message="tns:GetLicenseTimeSoapIn" />
+      <wsdl:output message="tns:GetLicenseTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetLicenseTime">
+      <wsdl:input message="tns:SetLicenseTimeSoapIn" />
+      <wsdl:output message="tns:SetLicenseTimeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GUDWIN_x0020_GisServerServiceSoap" type="tns:GUDWIN_x0020_GisServerServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConnectToServer">
+      <soap:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/ConnectToServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClientPing">
+      <soap:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/ClientPing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Disconnect">
+      <soap:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/Disconnect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarmTable">
+      <soap:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/GetAlarmTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestedAlarmTable">
+      <soap:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/GetRequestedAlarmTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllObjects">
+      <soap:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/GetAllObjects" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateObjectsInfo">
+      <soap:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/UpdateObjectsInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAlarms">
+      <soap:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/UpdateAlarms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoute">
+      <soap:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/GetRoute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetObjInfo">
+      <soap:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/GetObjInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllObjInfo">
+      <soap:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/GetAllObjInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetObjParams">
+      <soap:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/GetObjParams" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReport">
+      <soap:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/GetReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseTime">
+      <soap:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/GetLicenseTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetLicenseTime">
+      <soap:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/SetLicenseTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GUDWIN_x0020_GisServerServiceSoap12" type="tns:GUDWIN_x0020_GisServerServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConnectToServer">
+      <soap12:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/ConnectToServer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClientPing">
+      <soap12:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/ClientPing" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Disconnect">
+      <soap12:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/Disconnect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarmTable">
+      <soap12:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/GetAlarmTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestedAlarmTable">
+      <soap12:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/GetRequestedAlarmTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllObjects">
+      <soap12:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/GetAllObjects" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateObjectsInfo">
+      <soap12:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/UpdateObjectsInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAlarms">
+      <soap12:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/UpdateAlarms" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoute">
+      <soap12:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/GetRoute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetObjInfo">
+      <soap12:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/GetObjInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllObjInfo">
+      <soap12:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/GetAllObjInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetObjParams">
+      <soap12:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/GetObjParams" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReport">
+      <soap12:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/GetReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseTime">
+      <soap12:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/GetLicenseTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetLicenseTime">
+      <soap12:operation soapAction="http://localhost:19236/WebServer/Service1.asmx/SetLicenseTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GUDWIN_x0020_GisServerService">
+    <wsdl:port name="GUDWIN_x0020_GisServerServiceSoap" binding="tns:GUDWIN_x0020_GisServerServiceSoap">
+      <soap:address location="http://localhost:19236/WebServer/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GUDWIN_x0020_GisServerServiceSoap12" binding="tns:GUDWIN_x0020_GisServerServiceSoap12">
+      <soap12:address location="http://localhost:19236/WebServer/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

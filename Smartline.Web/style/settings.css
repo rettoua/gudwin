@@ -1,0 +1,147 @@
+﻿.viewport
+{
+    background-color: transparent;
+}
+
+body
+{
+    font: normal 11px tahoma, arial, helvetica, sans-serif;
+}
+
+#customers-ct table
+{
+    width: 100% !important;
+    border-spacing: 0px;
+}
+
+    #customers-ct table h3
+    {
+        margin: 0px;
+    }
+
+#customers-ct th
+{
+    background: #F0F4F5 url(../Resources/toolbar-default-bg.png) repeat-x scroll left top;
+    font-weight: bold;
+    padding: 8px 5px;
+    border-spacing: 0px;
+}
+
+#customers-ct .data-table
+{
+    border-spacing: 0px;
+}
+
+    #customers-ct .data-table td
+    {
+        padding: 3px;
+        border-bottom: 1px solid silver;
+        border-spacing: 0px;
+    }
+
+        #customers-ct .data-table td.parking
+        {
+            border-left: 1px solid silver;
+        }
+
+#customers-ct .letter-row-div
+{
+    border: none;
+}
+
+    #customers-ct .letter-row-div h2
+    {
+        font-size: 18px;
+    }
+
+#customers-ct .header
+{
+    padding: 10px 0px 10px 5px;
+}
+
+    #customers-ct .header p
+    {
+        font-size: 2em;
+        margin: 0px;
+    }
+
+    #customers-ct .header a
+    {
+        margin-bottom: 10px;
+    }
+
+.cust-name-over
+{
+    cursor: pointer;
+    background-color: #efefef;
+}
+
+#customers-ct .letter-row-div
+{
+    border-bottom: 2px solid #99bbe8;
+    cursor: pointer;
+    background: transparent url(../Resources/group-expand-sprite.png) no-repeat 5px -46px;
+}
+
+    #customers-ct .letter-row-div h2
+    {
+        padding-left: 20px;
+    }
+
+    #customers-ct .letter-row-div.collapsed
+    {
+        background-position: 5px 4px;
+    }
+
+#customers-ct div.date-row
+{
+}
+
+    #customers-ct div.date-row.collapsed
+    {
+        display: none;
+    }
+
+#customers-ct .date-row-div
+{
+    cursor: pointer;
+    background: #efefef url(../Resources/group-expand-sprite.png) 15px -40px no-repeat;
+    text-align: center;
+    padding: 5px;
+}
+
+    #customers-ct .date-row-div h3
+    {
+        padding-left: 20px;
+        margin: 3px;
+    }
+
+    #customers-ct .date-row-div.collapsed
+    {
+        background-position: 15px 10px;
+    }
+
+#customers-ct table.collapsed
+{
+    display: none;
+}
+
+#customers-ct p table.collapsed
+{
+    display: none;
+}
+
+#customers-ct tr.summary-record
+{
+    cursor: pointer;
+    background-color: #efefef;
+    font-weight: bold;
+}
+
+.customer-label
+{
+    font-weight: bold;
+    font-size: 12px;
+    padding: 0px 0px 0px 32px;
+    width: 150px;
+}

@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AEE18EB7-3B5A-4043-B05B-DD5C82CBC4B2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Smartline.Mapping</RootNamespace>
+    <AssemblyName>Smartline.Mapping</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.2.0.0\lib\2.0\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Couchbase, Version=1.2.0.0, Culture=neutral, PublicKeyToken=05e9c6b5a9ec94c2, processorArchitecture=MSIL">
+      <HintPath>..\packages\CouchbaseNetClient.1.2.0\lib\net40\Couchbase.dll</HintPath>
+    </Reference>
+    <Reference Include="Enyim.Caching, Version=2.12.0.0, Culture=neutral, PublicKeyToken=05e9c6b5a9ec94c2, processorArchitecture=MSIL">
+      <HintPath>..\packages\CouchbaseNetClient.1.2.0\lib\net40\Enyim.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Ext.Net">
+      <HintPath>..\Smartline.Web\Libraries\Ext.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Hammock, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c148cfba29ed1a4d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hammock.1.2.9\lib\4.0\Hammock.dll</HintPath>
+    </Reference>
+    <Reference Include="Hammock.ClientProfile, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c148cfba29ed1a4d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hammock.1.2.9\lib\4.0\Hammock.ClientProfile.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Smartline.Server.Runtime">
+      <HintPath>..\GisServerService\Bin\Smartline.Server.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Transformer.NET, Version=2.1.1.22883, Culture=neutral, PublicKeyToken=e274d618e7c603a7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Smartline.Web\Libraries\Transformer.NET.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account.cs" />
+    <Compile Include="AccountingHelper.cs" />
+    <Compile Include="CarImage.cs" />
+    <Compile Include="GlobalAccountingSettings.cs" />
+    <Compile Include="ActualServerState.cs" />
+    <Compile Include="CouchbaseAssignHelper.cs" />
+    <Compile Include="CarsRepository.cs" />
+    <Compile Include="CouchbaseManager.cs" />
+    <Compile Include="Event.cs" />
+    <Compile Include="EvosIntegration.cs" />
+    <Compile Include="GpsDay.cs" />
+    <Compile Include="Increments.cs" />
+    <Compile Include="InternalUser.cs" />
+    <Compile Include="IReportItem.cs" />
+    <Compile Include="ISensor.cs" />
+    <Compile Include="IUser.cs" />
+    <Compile Include="IUserTracker.cs" />
+    <Compile Include="LastGpsDayInfo.cs" />
+    <Compile Include="Odometer.cs" />
+    <Compile Include="PaymentRequest.cs" />
+    <Compile Include="PaymentConfirmation.cs" />
+    <Compile Include="Relay.cs" />
+    <Compile Include="RelayAction.cs" />
+    <Compile Include="RelayCollection.cs" />
+    <Compile Include="ReportAdapted.cs" />
+    <Compile Include="ReportCommon.cs" />
+    <Compile Include="ReportDay.cs" />
+    <Compile Include="ReportFull.cs" />
+    <Compile Include="ReportFullObject.cs" />
+    <Compile Include="ReportHistory.cs" />
+    <Compile Include="Repository.cs" />
+    <Compile Include="Sensor.cs" />
+    <Compile Include="SensorAlarm.cs" />
+    <Compile Include="SensorsDay.cs" />
+    <Compile Include="SensorState.cs" />
+    <Compile Include="ShortGps.cs" />
+    <Compile Include="SpeedLimits.cs" />
+    <Compile Include="StateManager\StateManagerPackage.cs" />
+    <Compile Include="TrackersCollection.cs" />
+    <Compile Include="TrackerServiceInfo.cs" />
+    <Compile Include="Tracker.cs" />
+    <Compile Include="TrackerInfo.cs" />
+    <Compile Include="Traffic.cs" />
+    <Compile Include="BasicUser.cs" />
+    <Compile Include="TurnRelay.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="UserMeta.cs" />
+    <Compile Include="UserSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="WebLogging.cs" />
+    <Compile Include="WindowSettings.cs" />
+    <Compile Include="WriteOff.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="References\Castle.Core.dll" />
+    <Content Include="References\FluentNHibernate.dll" />
+    <Content Include="References\Iesi.Collections.dll" />
+    <Content Include="References\NHibernate.ByteCode.Castle.dll" />
+    <Content Include="References\NHibernate.ByteCode.LinFu.dll" />
+    <Content Include="References\NHibernate.dll" />
+    <Content Include="References\Remotion.Data.Linq.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Smartline.Common.Runtime\Smartline.Common.Runtime.csproj">
+      <Project>{7E1FE99A-D6AF-4981-8186-27685EC8918D}</Project>
+      <Name>Smartline.Common.Runtime</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

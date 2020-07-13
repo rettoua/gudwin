@@ -1,0 +1,59 @@
+﻿.h-main
+{
+    width: 100%;
+    height: 39px;
+    background-image: url('../Resources/background.png');
+    background-repeat: repeat-x;
+    font-family: consolas;    
+    text-shadow: 0px 1px 0px #ffffff;
+}
+
+.h-td-item-cars
+{
+    height: 35px;
+    width: 350px;
+    color: gray;
+    text-align: center;    
+}
+
+.h-td-item-cars:hover
+{
+    color: black;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.h-td-item-tracker
+{
+    height: 35px;
+    width: 80px;
+    color: gray;
+    text-align: center;
+}
+
+.h-td-item-tracker:hover
+{
+    color: black;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.h-td-item-settings
+{
+    height: 35px;
+    width: 95px;
+    color: gray;
+    text-align: center;
+}
+
+.h-td-item-settings:hover
+{
+    color: black;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+.h-td-item-filler
+{
+    width: auto;
+}
+

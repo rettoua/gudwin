@@ -1,0 +1,148 @@
+﻿.a-div-run {
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: 0px auto;
+    background-image: url('../Resources/run.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    min-width: 25px;
+}
+
+    .a-div-run:hover {
+        background-image: url('../Resources/run_hover.png');
+        cursor: pointer;
+    }
+
+.a-div-stop {
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: 0px auto;
+    background-image: url('../Resources/stop.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+    .a-div-stop:hover {
+        background-image: url('../Resources/stop_hover.png');
+        cursor: pointer;
+    }
+
+.a-div-marker {
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: 0px auto;
+    background-image: url('../Resources/grey_marker.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+    .a-div-marker:hover {
+        cursor: pointer;
+    }
+
+.a-div-marker-select {
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: 0px auto;
+    background-image: url('../Resources/marker.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+    .a-div-marker-select:hover {
+        cursor: pointer;
+    }
+
+.x-grid-custom .x-grid3-row-selected {
+    border-color: #f1f1f1;
+    border-style: solid;
+}
+
+.a-link:link {
+    font-size: 12px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #6e6e6e;
+}
+
+.a-link:visited {
+    text-decoration: none;
+    color: #6e6e6e;
+}
+
+.a-link:hover {
+    text-decoration: underline;
+    color: #000000;
+}
+
+.a-td-speed {
+    width: 100px;
+    vertical-align: middle;
+}
+
+.a-span-speed {
+    text-align: center;
+    font-family: cursive;
+    vertical-align: middle;
+    font-size: 12pt;
+    color: #000000;
+}
+
+.div-car-loading {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 12px;
+}
+
+.span-loading {
+    color: rgb(103, 101, 101);
+    text-shadow: 0px 1px 0px #dfdddd;
+    font-size: 13pt;
+    font-family: Arial;
+}
+
+.div-col {
+    position: relative;
+    cursor: pointer;
+    top: -2px;
+    left: -2px;
+    z-index: 2;
+    background-image: url('../Resources/colexp.jpg');
+    opacity: 0.8;
+    width: 25px;
+    height: 25px;
+}
+
+    .div-col:hover {
+        opacity: 1;
+    }
+
+.div-exp {
+    position: relative;
+    cursor: pointer;
+    top: -2px;
+    left: -2px;
+    z-index: 2;
+    background-image: url('../Resources/colexp1.jpg');
+    opacity: 0.8;
+    width: 25px;
+    height: 25px;
+}
+
+    .div-exp:hover {
+        opacity: 1;
+    }
+
+.window-opacity.x-window {
+    -ms-opacity: 0.5 !important;
+    opacity: 0.5 !important;
+}
+
+    .window-opacity:hover {
+        -ms-opacity: 1 !important;
+        opacity: 1 !important;
+    }    

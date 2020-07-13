@@ -1,0 +1,45 @@
+﻿table.payment-history {
+    width: 100%;
+    font-family: sans-serif;
+    color: rgb(91, 91, 91);
+    font-size: 12px;
+    cursor: default;
+}
+
+    table.payment-history tr:hover {
+        background-color: rgb(239, 239, 239);
+    }
+
+    table.payment-history td {
+        text-align: center;
+        height: 20px;
+    }
+
+        table.payment-history td#amount {
+            color: rgb(0, 0, 0);
+        }
+
+    table.payment-history th {
+        background-color: rgb(239, 239, 239);
+    }
+
+    table.payment-history td#total_text {
+        font-style: oblique;
+    }
+
+    table.payment-history tr#total {
+        background-color: rgb(239, 239, 239);
+        font-weight: bold;
+    }
+
+table.payment-history-header {
+    width: 100%;
+    font-family: sans-serif;
+    color: rgb(91, 91, 91);
+    font-size: 12px;
+    cursor: default;
+}
+
+    table.payment-history-header th {
+        background-color: rgb(239, 239, 239);
+    }

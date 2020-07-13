@@ -1,0 +1,244 @@
+﻿.repository-run .x-grid-cell, .dirty-row .x-grid-rowwrap-div {
+    background: #c0ffcb;
+}
+
+.repository-sos .x-grid-cell, .dirty-row .x-grid-rowwrap-div {
+    background: #f5ff00;
+}
+
+.repository-sos-lite .x-grid-cell, .dirty-row .x-grid-rowwrap-div {
+    background: #fb7070;
+}
+
+.repository-stop .x-grid-cell, .dirty-row .x-grid-rowwrap-div {
+    background: #dbecff;
+}
+
+.repository-absent .x-grid-cell, .dirty-row .x-grid-rowwrap-div {
+    background: #ffecec;
+}
+
+.repository-lost .x-grid-cell, .dirty-row .x-grid-rowwrap-div {
+    background: #e8e8e8;
+}
+
+table.repository-title {
+    color: black;
+    background-color: white;
+    font-size: 11px;
+    font-weight: bold;
+    font-family: Arial;
+    margin: 2px;
+    padding: 2px;
+    border-color: grey;
+    border-width: 1px;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 2px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+table.repository-title-1 {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: sans-serif;
+    border-collapse: collapse;
+    border-spacing: 2px;
+    white-space: nowrap;
+    text-align: center;
+    /*-webkit-text-stroke: 1px white;*/
+    color: black;
+    text-shadow: 3px 3px 0 #00bfff, -1px -1px 0 #00bfff, 1px -1px 0 #00bfff, -1px 1px 0 #00bfff, 1px 1px 0 #00bfff;
+}
+
+table.repository-title-sos {
+    color: black;
+    background-color: #f5ff00;
+    font-size: 11px;
+    font-weight: bold;
+    font-family: Arial;
+    margin: 2px;
+    padding: 2px;
+    border-color: grey;
+    border-width: 1px;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 2px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+table.repository-title-sos-lite {
+    color: black;
+    background-color: #fb7070;
+    font-size: 11px;
+    font-weight: bold;
+    font-family: Arial;
+    margin: 2px;
+    padding: 2px;
+    border-color: grey;
+    border-width: 1px;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 2px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.info-window-label {
+    color: rgb(145, 144, 144);
+    font-size: 11px;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+.info-window-value {
+    color: rgb(145, 144, 144);
+    font-size: 11px;
+    font-family: Arial;
+    padding-left: 5px;
+}
+
+div.track {
+    border-style: solid solid none solid;
+    border-width: thin;
+    border-color: rgb(235, 233, 233);
+    padding: 2px;
+    background-color: rgb(248, 248, 248);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+    div.track:hover {
+        background-color: rgb(216, 243, 253);
+    }
+
+    div.track p {
+        margin: 1px 1px 1px 1px;
+    }
+
+p.track {
+    color: rgb(98, 98, 98);
+    font-weight: normal;
+}
+
+div.track-summary {
+    padding: 2px;
+    background-color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    cursor: default;
+    color: green;
+}
+
+div.track-control {
+    height: 36px;
+    width: 36px;
+    cursor: pointer;
+    background-image: url('../Resources/road-icon.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+div.sensor-history-control {
+    height: 36px;
+    width: 36px;
+    cursor: pointer;
+    background-image: url('../Resources/road-icon.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+div.track-speed-control {
+    height: 36px;
+    width: 36px;
+    cursor: pointer;
+    background-image: url('../Resources/speed_sign.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-btn-icon-el.tracker-setting-icon {
+    background-image: url('../Resources/parking.jpg');
+    width: 26px;
+    height: 26px;
+}
+
+    .x-btn-icon-el.tracker-setting-icon.inactive {
+        background-image: url('../Resources/parking_inactive.jpg');
+    }
+
+
+.x-btn-icon-el.tracker-speed-sign {
+    background-image: url('../Resources/speed_sign.png');
+    width: 26px;
+    height: 26px;
+}
+
+    .x-btn-icon-el.tracker-speed-sign.inactive {
+        background-image: url('../Resources/speed_sign_inactive.png');
+    }
+
+.x-btn-icon-el.tracker-point-icon {
+    background-image: url('../Resources/dot.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+    .x-btn-icon-el.tracker-point-icon.inactive {
+        background-image: url('../Resources/dot_inactive.png');
+    }
+
+.x-btn-icon-el.tracker-speed-icon {
+    background-image: url('../Resources/traffic_light.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+    .x-btn-icon-el.tracker-speed-icon.inactive {
+        background-image: url('../Resources/traffic_light_inactive.png');
+    }
+
+span.track-time {
+    color: rgb(0, 131, 255);
+}
+
+.icon-battery {
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 28px;
+    margin-right: 3px !important;
+}
+
+    .icon-battery.s25 {
+        background-image: url('../Resources/Battery25.png');
+    }
+
+    .icon-battery.s50 {
+        background-image: url('../Resources/Battery50.png');
+    }
+
+    .icon-battery.s75 {
+        background-image: url('../Resources/Battery75.png');
+    }
+
+    .icon-battery.s100 {
+        background-image: url('../Resources/Battery100.png');
+    }
+
+a.alarm_sensor:link {
+    color: #00b2ff;
+    text-decoration: underline;
+}
+
+a.alarm_sensor:visited {
+    color: #00b2ff;
+    text-decoration: none;
+}
+
+a.alarm_sensor:hover {
+    color: #00b2ff;
+    text-decoration: underline;
+}

@@ -1,0 +1,51 @@
+﻿table.table-main
+{
+    border-top: 0px;
+    border-bottom: 1px;
+    border-right: 0px;
+    border-left: 0px;
+    border-style: solid;
+    border-color: rgb(232, 232, 232);
+
+}
+
+table.table-main:hover
+{
+    background-color: rgb(246, 246, 246);
+}
+
+
+.div-car-ext
+{
+    height: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../Resources/exp.gif');
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.div-car-ext:hover
+{
+    background-color: rgb(255, 255, 255);
+}
+
+.div-car-col
+{
+    height: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../Resources/col.gif');
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.div-car-col:hover
+{
+    background-color: rgb(255, 255, 255);
+}
+
+.font-common {
+    font-family: Arial;
+    font-size: 12px;
+}

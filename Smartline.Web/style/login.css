@@ -1,0 +1,222 @@
+﻿table.body {
+    position: absolute;
+    top: 30%;
+    left: 37%;
+}
+
+table.l-table {
+    width: 400px;
+    height: 250px;
+    border-width: 0px;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    border-style: hidden;
+}
+
+.l-tr-top {
+    background-image: url('../Resources/login_top.png');
+    height: 9px;
+    background-repeat: no-repeat;
+}
+
+body {
+    background-color: #f4f4f3;
+}
+
+
+.l-td-left {
+    background-image: url('../Resources/login_left.png');
+    width: 6px;
+    height: 233px;
+    background-repeat: no-repeat;
+}
+
+.l-td-right {
+    background-image: url('../Resources/login_right.png');
+    width: 6px;
+    background-repeat: no-repeat;
+}
+
+.l-td-center {
+    background-image: url('../Resources/login_center.png');
+    background-repeat: repeat-x;
+    width: 388px;
+    height: 233px;
+}
+
+.l-tr-bottom {
+    background-image: url('../Resources/login_bottom.png');
+    background-repeat: no-repeat;
+}
+
+.l-span-header {
+    color: rgb(103, 101, 101);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial;
+    text-shadow: 0px 1px 0px #eeebeb;
+    vertical-align: text-top;
+    margin-right: 40px;
+}
+
+.l-span-td {
+    color: rgb(137, 137, 137);
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Arial;
+    text-shadow: 0px 1px 0px #ffffff;
+    margin-left: 10px;
+}
+
+.l-span-td-remember {
+    color: rgb(137, 137, 137);
+    font-size: 11px;
+    font-weight: bold;
+    font-family: Arial;
+    text-shadow: 0px 1px 0px #ffffff;
+    margin-left: 10px;
+}
+
+.l-td-inner-td {
+    height: 25px;
+}
+
+.l-div-input {
+    height: 27px;
+    width: 275px;
+    margin-left: 10px;
+    background-color: white;
+    cursor: text;
+    border: 1px rgb(175, 175, 175) solid;
+}
+
+    .l-div-input:hover {
+        border-color: rgb(255, 167, 5);
+    }
+
+.l-input {
+    border: none;
+    width: 95%;
+    height: inherit;
+    padding-left: 5px;
+    color: inherit;
+    font-weight: bold;
+    color: rgb(103, 101, 101);
+}
+
+.l-span-a {
+    color: rgb(174, 82, 175);
+    font-size: 11px;
+    font-weight: bold;
+    font-family: Arial;
+    text-shadow: 1px 1px 0px #e2e2e2;
+}
+
+.l-label-error {
+    color: rgb(218, 55, 58);
+    font-size: 11px;
+    font-weight: bold;
+    font-family: Arial;
+    text-shadow: 1px 1px 0px #e2e2e2;
+    margin-left: 10px;
+}
+
+.l-div-login {
+    display: table-cell;
+    width: 104px;
+    height: 28px;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    background-image: url('../Resources/login_button.png');
+}
+
+    .l-div-login:hover {
+        background-image: url('../Resources/login_button_hover.png');
+    }
+
+    .l-div-login:active {
+        background-image: url('../Resources/login_button_click.png');
+    }
+
+.l-span-div-login {
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    font-weight: bold;
+    font-family: Arial;
+    text-shadow: 0px 1px 0px #595959;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.l-div-register {
+    width: 375px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px;
+    border: 1px rgb(174, 82, 175) solid;
+    background-color: white;
+}
+
+.l-span-help-title {
+    color: rgb(174, 82, 175);
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Arial;
+    margin-left: 10px;
+}
+
+.l-span-help-text {
+    font-size: 11px;
+    font-family: Arial;
+    margin-left: auto;
+}
+
+.div-logo-name {
+    background-image: url('../Resources/docked_title.png');
+    background-position: center;
+}
+
+.div-copyright {
+    position: absolute;
+    width: 98%;
+    font-family: "Consolas";
+    top: 92%;
+    left: 1%;
+    border-style: solid;
+    border-width: 1px;
+    border-left: 1px;
+    border-right: 1px;
+    border-bottom: 1px;
+    border-color: rgb(209, 209, 209);
+    text-shadow: 0px 1px 0px #fbfafa;
+    text-align: center;
+    height: 55px;
+}
+
+a.link {
+    color: rgb(174, 82, 175);
+}
+
+.div-possibility {
+    padding: 10px;
+    font-size: 13px;
+    font-family: tahoma,arial,verdana,sans-serif;
+    /*font-weight: bold;*/
+}
+
+    .div-possibility li {
+        margin: 3px;
+    }
+
+    .div-possibility img {
+        top: 3px;
+    }
+
+.login-title {
+    height: 40px;
+    font: normal 30px Arial;   
+    padding-top: 10px; 
+    color: #b1b1b1;
+    text-shadow: 0 1px 0 #ccc
+}

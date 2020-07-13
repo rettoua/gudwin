@@ -1,0 +1,114 @@
+﻿.c-div-main
+{
+    width: 81px;
+    height: 81px;
+    background-image: url('../Resources/c_rect.png');
+    background-size: 79px 79px;
+    background-position: 1px 1px;  
+    background-repeat: no-repeat;
+    position: relative;
+    cursor: pointer;
+    top: 0px;
+    left: 80px;
+    z-index: 2;
+}
+
+.c-div-main1:hover
+{    
+    background-image: url('../Resources/c_rect_hover.png');
+    background-position: 0px 0px;  
+    background-size: 81px 81px;
+}
+
+.c-table
+{
+    border-width: 0px;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    border-style: hidden;        
+    width: inherit;    
+    table-layout: fixed;
+}
+
+.c-tr-header
+{
+    height: 10px;
+}
+
+.c-td-gas
+{
+    width: 70px;
+    background-image: url('../Resources/gas_grey.png');
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.c-td-close
+{
+    width: 9px;
+    background-image: url('../Resources/c_close.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.c-td-close:hover
+{
+    cursor: pointer;
+    background-size: 9 9;
+}
+
+.c-tr-name
+{
+    height: 20px;
+}
+
+.c-td-name
+{
+    color: #000000;
+    font-family: "Times New Roman";
+    font-size: 10px;
+    font-weight: bolder;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.c-tr-speed
+{
+    height: 15px;
+    font-family: "Times New Roman";
+}
+
+.c-td-speed
+{
+    width: 50px;
+    font-size: 18px;
+    font-family: "Times New Roman";
+    font-weight: bolder;
+    text-align: right;
+    vertical-align: text-bottom;
+    padding-right: 2px;
+}
+
+.c-td-speed-mark
+{
+    width: 29px;
+    font-size: 10px;
+    font-family: "Times New Roman";
+    vertical-align: text-bottom;
+}
+
+.c-tr-time
+{
+    position: relative;
+    margin-top: -5px;
+    padding-top: -5px;
+}
+
+.c-td-time
+{
+    font-size: 10px;
+    font-family: "Times New Roman";
+    vertical-align: text-top;
+    text-align: left;
+    padding-left: 5px;
+}

@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Smartline.Service.Data.PointsService" CodeBehind="PointsService.svc.cs" %>
